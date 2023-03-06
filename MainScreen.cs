@@ -21,24 +21,30 @@ namespace WoW_Realmlist_Changer
 
             AddServer addSvrWindow = new AddServer();
             addSvrWindow.ShowDialog();
+
             ShowServers();
         }
 
         private void ShowServers()
         {
-            //1st you must create columns to dgv, like:
-            dataGridView1.Columns.Add("Name", "Name1");
-            dataGridView1.Columns.Add("About", "About1");
-            dataGridView1.Columns.Add("Realmlist", "Realmlist1");
-            //and so on...
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+
+            dataGridView1.Columns.Add("Name", "Name");
+            dataGridView1.Columns.Add("Realmlist", "Realmlist");
+            dataGridView1.Columns.Add("About", "About");
+
+            dataGridView1.Columns[2].Visible= false;
+
             using (StreamReader sr = new StreamReader(@"Config.ini"))
             {
                 int row = 0;
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    string[] columns = line.Split(',');
                     dataGridView1.Rows.Add();
+                    string[] columns = line.Split(',');
                     for (int i = 0; i < columns.Length; i++)
                     {
                         dataGridView1[i, row].Value = columns[i];

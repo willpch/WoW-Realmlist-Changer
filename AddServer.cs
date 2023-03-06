@@ -26,12 +26,13 @@ namespace WoW_Realmlist_Changer
 
             StreamReader sr = new StreamReader(@"Config.ini");
 
-            string oldData = sr.ReadLine();
+            string oldData = sr.ReadToEnd();
             sr.Close();
 
             StreamWriter sw = new StreamWriter(@"Config.ini");
 
-            sw.WriteLine(data[0] + "," + data[1] + "," + data[2] + Environment.NewLine + oldData);
+            sw.WriteLine(data[0] + "," + data[1] + "," + data[2]);
+            sw.WriteAsync(oldData);
             sw.Close();
             this.Close();
         }

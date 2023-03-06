@@ -29,104 +29,109 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            bntLaunch = new Button();
-            label1 = new Label();
-            groupBox1 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            btnAddSvr = new Button();
-            btnDeleteSrv = new Button();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.bntLaunch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAddSvr = new System.Windows.Forms.Button();
+            this.btnDeleteSrv = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // bntLaunch
             // 
-            bntLaunch.BackColor = Color.Khaki;
-            bntLaunch.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            bntLaunch.Location = new Point(364, 275);
-            bntLaunch.Name = "bntLaunch";
-            bntLaunch.Size = new Size(112, 60);
-            bntLaunch.TabIndex = 0;
-            bntLaunch.Text = "Launch WOW";
-            bntLaunch.UseVisualStyleBackColor = false;
-            bntLaunch.Click += bntLaunch_Click;
+            this.bntLaunch.BackColor = System.Drawing.Color.Khaki;
+            this.bntLaunch.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bntLaunch.Location = new System.Drawing.Point(364, 275);
+            this.bntLaunch.Name = "bntLaunch";
+            this.bntLaunch.Size = new System.Drawing.Size(112, 60);
+            this.bntLaunch.TabIndex = 0;
+            this.bntLaunch.Text = "Launch WOW";
+            this.bntLaunch.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Gadugi", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(87, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(322, 21);
-            label1.TabIndex = 1;
-            label1.Text = "WOW 3.5.5a REALMLIST CHANGER";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(87, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(322, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "WOW 3.5.5a REALMLIST CHANGER";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Location = new Point(12, 33);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(346, 302);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Servers";
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(346, 302);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Servers";
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.LightSteelBlue;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(334, 274);
-            dataGridView1.TabIndex = 0;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 22);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(334, 274);
+            this.dataGridView1.TabIndex = 0;
             // 
             // btnAddSvr
             // 
-            btnAddSvr.BackColor = Color.LimeGreen;
-            btnAddSvr.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAddSvr.Location = new Point(364, 55);
-            btnAddSvr.Name = "btnAddSvr";
-            btnAddSvr.Size = new Size(112, 27);
-            btnAddSvr.TabIndex = 3;
-            btnAddSvr.Text = "Add a Server";
-            btnAddSvr.UseVisualStyleBackColor = false;
-            btnAddSvr.Click += btnAddSvr_Click;
+            this.btnAddSvr.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAddSvr.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddSvr.Location = new System.Drawing.Point(364, 55);
+            this.btnAddSvr.Name = "btnAddSvr";
+            this.btnAddSvr.Size = new System.Drawing.Size(112, 27);
+            this.btnAddSvr.TabIndex = 3;
+            this.btnAddSvr.Text = "Add a Server";
+            this.btnAddSvr.UseVisualStyleBackColor = false;
             // 
             // btnDeleteSrv
             // 
-            btnDeleteSrv.BackColor = Color.Red;
-            btnDeleteSrv.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDeleteSrv.ForeColor = SystemColors.ButtonFace;
-            btnDeleteSrv.Location = new Point(364, 88);
-            btnDeleteSrv.Name = "btnDeleteSrv";
-            btnDeleteSrv.Size = new Size(112, 27);
-            btnDeleteSrv.TabIndex = 4;
-            btnDeleteSrv.Text = "Delete Selected";
-            btnDeleteSrv.UseVisualStyleBackColor = false;
+            this.btnDeleteSrv.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteSrv.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteSrv.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDeleteSrv.Location = new System.Drawing.Point(364, 88);
+            this.btnDeleteSrv.Name = "btnDeleteSrv";
+            this.btnDeleteSrv.Size = new System.Drawing.Size(112, 27);
+            this.btnDeleteSrv.TabIndex = 4;
+            this.btnDeleteSrv.Text = "Delete Selected";
+            this.btnDeleteSrv.UseVisualStyleBackColor = false;
             // 
             // MainScreen
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(487, 347);
-            Controls.Add(btnDeleteSrv);
-            Controls.Add(btnAddSvr);
-            Controls.Add(groupBox1);
-            Controls.Add(label1);
-            Controls.Add(bntLaunch);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
-            MaximumSize = new Size(503, 386);
-            MinimumSize = new Size(503, 386);
-            Name = "MainScreen";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "WoW Realmlist Changer - v1.0.0";
-            groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(487, 347);
+            this.Controls.Add(this.btnDeleteSrv);
+            this.Controls.Add(this.btnAddSvr);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bntLaunch);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(503, 386);
+            this.MinimumSize = new System.Drawing.Size(503, 386);
+            this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "WoW Realmlist Changer - v1.0.0";
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
