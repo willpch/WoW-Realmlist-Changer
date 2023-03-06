@@ -16,15 +16,6 @@ namespace WoW_Realmlist_Changer
             System.Diagnostics.Process.Start("E:\\Downloads\\World of Warcraft 3.3.5a\\wow.exe");
         }
 
-        private void btnAddSvr_Click(object sender, EventArgs e)
-        {
-
-            AddServer addSvrWindow = new AddServer();
-            addSvrWindow.ShowDialog();
-
-            ShowServers();
-        }
-
         private void ShowServers()
         {
             dataGridView1.Columns.Clear();
@@ -52,6 +43,14 @@ namespace WoW_Realmlist_Changer
                     row++;
                 }
             }
+        }
+
+        private void btnAddSvr_Click(object sender, EventArgs e)
+        {
+            AddServer addSvrWindow = new AddServer();
+            addSvrWindow.ShowDialog();
+
+            ShowServers();
         }
     }
 }

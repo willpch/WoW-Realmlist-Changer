@@ -96,6 +96,7 @@
             this.btnAddSvr.TabIndex = 3;
             this.btnAddSvr.Text = "Add a Server";
             this.btnAddSvr.UseVisualStyleBackColor = false;
+            this.btnAddSvr.Click += new System.EventHandler(this.btnAddSvr_Click);
             // 
             // btnDeleteSrv
             // 
