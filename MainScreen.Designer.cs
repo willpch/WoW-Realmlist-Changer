@@ -38,6 +38,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddSvr = new System.Windows.Forms.Button();
             this.btnDeleteSrv = new System.Windows.Forms.Button();
+            this.btnChangeDir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -148,12 +149,26 @@
             this.btnDeleteSrv.UseVisualStyleBackColor = false;
             this.btnDeleteSrv.Click += new System.EventHandler(this.btnDeleteSrv_Click);
             // 
+            // btnChangeDir
+            // 
+            this.btnChangeDir.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnChangeDir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChangeDir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnChangeDir.Location = new System.Drawing.Point(363, 242);
+            this.btnChangeDir.Name = "btnChangeDir";
+            this.btnChangeDir.Size = new System.Drawing.Size(112, 27);
+            this.btnChangeDir.TabIndex = 5;
+            this.btnChangeDir.Text = "Change dir";
+            this.btnChangeDir.UseVisualStyleBackColor = false;
+            this.btnChangeDir.Click += new System.EventHandler(this.btnChangeDir_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(487, 347);
+            this.Controls.Add(this.btnChangeDir);
             this.Controls.Add(this.btnDeleteSrv);
             this.Controls.Add(this.btnAddSvr);
             this.Controls.Add(this.groupBox1);
@@ -181,5 +196,6 @@
         private DataGridView dataGridView1;
         private Button btnAddSvr;
         private Button btnDeleteSrv;
+        private Button btnChangeDir;
     }
 }

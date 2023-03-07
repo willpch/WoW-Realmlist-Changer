@@ -8,6 +8,8 @@ namespace WoW_Realmlist_Changer
 
         string dbfile = @"Servers.cfg";
         string wowPathFile = @"Config.ini";
+        string[] wowPathRow;
+        string? selServer;
 
         public MainScreen()
         {
@@ -22,28 +24,25 @@ namespace WoW_Realmlist_Changer
                 File.Create(wowPathFile).Close();
                 SetFolder();
             }
-            else
+
+            try
             {
-                try
+                wowPathRow = File.ReadAllLines(wowPathFile);
+                selServer = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                using (StreamWriter sw = new StreamWriter(wowPathRow[1]))
                 {
-                    string[] wowPathRow = File.ReadAllLines(wowPathFile);
-                    string? selServer = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-
-                    using (StreamWriter sw = new StreamWriter(wowPathRow[1]))
-                    {
-                        sw.WriteLine(selServer);
-                    }
-
-                    dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                    System.Diagnostics.Process.Start(wowPathRow[0]);
-
+                    sw.WriteLine(selServer);
                 }
-                catch
-                {
-                    throw;
-                }
+
+                dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                System.Diagnostics.Process.Start(wowPathRow[0]);
+            }
+            catch
+            {
+                MessageBox.Show("ERROR! Please, click on 'Change dir' button and select WoW.exe at the game folder again!  ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void ShowServers()
         {
@@ -124,7 +123,7 @@ namespace WoW_Realmlist_Changer
             try
             {
                 MessageBox.Show(
-                    "Please select where your game is installed.", "Important!", 
+                    "Please, select the place where WoW.exe is installed.", "Important!", 
                     MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button4
                     );
 
@@ -154,8 +153,8 @@ namespace WoW_Realmlist_Changer
                         }
 
                         MessageBox.Show(
-                            "Success! Executing WoW.exe...", "Success!",
-                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1
+                            "WoW folder is now registered.", "Success!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1
                             );
                     }
                 }
@@ -173,6 +172,11 @@ namespace WoW_Realmlist_Changer
         {
             RemoveSvr();
             ShowServers();
+        }
+
+        private void btnChangeDir_Click(object sender, EventArgs e)
+        {
+            SetFolder();
         }
     }
 }
