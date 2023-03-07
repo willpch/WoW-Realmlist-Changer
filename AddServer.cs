@@ -17,6 +17,8 @@ namespace WoW_Realmlist_Changer
             InitializeComponent();
         }
 
+        string dbFile = @"Servers.cfg";
+
         private void btnAddSvr_Click(object sender, EventArgs e)
         {
             string[] data = new string[3];
@@ -24,17 +26,25 @@ namespace WoW_Realmlist_Changer
             data[1] = txtRealmlist.Text;
             data[2] = txtAbout.Text;
 
-            StreamReader sr = new StreamReader(@"Config.ini");
+            try
+            {
+                StreamReader sr = new StreamReader(dbFile);
 
-            string oldData = sr.ReadToEnd();
-            sr.Close();
+                string oldData = sr.ReadToEnd();
+                sr.Close();
 
-            StreamWriter sw = new StreamWriter(@"Config.ini");
+                StreamWriter sw = new StreamWriter(dbFile);
 
-            sw.WriteLine(data[0] + "," + data[1] + "," + data[2]);
-            sw.WriteAsync(oldData);
-            sw.Close();
-            this.Close();
+                sw.WriteLine(data[0] + "," + data[1] + "," + data[2]);
+                sw.WriteAsync(oldData);
+                sw.Close();
+                this.Close();
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show("Error: " + ex, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
         }
     }
 }
