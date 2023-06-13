@@ -28,114 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtSvrName = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            txtRealmlist = new TextBox();
-            label3 = new Label();
-            txtAbout = new TextBox();
-            btnAddSvr = new Button();
-            label4 = new Label();
-            SuspendLayout();
+            this.txtSvrName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtRealmlist = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtAbout = new System.Windows.Forms.TextBox();
+            this.btnAddSvr = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // txtSvrName
             // 
-            txtSvrName.Location = new Point(105, 55);
-            txtSvrName.Name = "txtSvrName";
-            txtSvrName.PlaceholderText = "Example: Warmane";
-            txtSvrName.Size = new Size(215, 25);
-            txtSvrName.TabIndex = 0;
+            this.txtSvrName.Location = new System.Drawing.Point(105, 55);
+            this.txtSvrName.Name = "txtSvrName";
+            this.txtSvrName.PlaceholderText = "Example: Warmane";
+            this.txtSvrName.Size = new System.Drawing.Size(215, 25);
+            this.txtSvrName.TabIndex = 0;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 58);
-            label1.Name = "label1";
-            label1.Size = new Size(87, 17);
-            label1.TabIndex = 1;
-            label1.Text = "Server Name:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Server Name:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(36, 104);
-            label2.Name = "label2";
-            label2.Size = new Size(63, 17);
-            label2.TabIndex = 3;
-            label2.Text = "Realmlist:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Realmlist:";
             // 
             // txtRealmlist
             // 
-            txtRealmlist.Location = new Point(105, 101);
-            txtRealmlist.Name = "txtRealmlist";
-            txtRealmlist.PlaceholderText = "set realmlist logon.warmane.com";
-            txtRealmlist.Size = new Size(215, 25);
-            txtRealmlist.TabIndex = 2;
+            this.txtRealmlist.Location = new System.Drawing.Point(105, 101);
+            this.txtRealmlist.Name = "txtRealmlist";
+            this.txtRealmlist.PlaceholderText = "set realmlist logon.warmane.com";
+            this.txtRealmlist.Size = new System.Drawing.Size(215, 25);
+            this.txtRealmlist.TabIndex = 2;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(53, 149);
-            label3.Name = "label3";
-            label3.Size = new Size(46, 17);
-            label3.TabIndex = 5;
-            label3.Text = "About:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "About:";
             // 
             // txtAbout
             // 
-            txtAbout.Location = new Point(105, 146);
-            txtAbout.Name = "txtAbout";
-            txtAbout.PlaceholderText = "7x Exp, good population.";
-            txtAbout.Size = new Size(215, 25);
-            txtAbout.TabIndex = 4;
+            this.txtAbout.Location = new System.Drawing.Point(105, 146);
+            this.txtAbout.Name = "txtAbout";
+            this.txtAbout.PlaceholderText = "7x Exp, good population.";
+            this.txtAbout.Size = new System.Drawing.Size(215, 25);
+            this.txtAbout.TabIndex = 4;
             // 
             // btnAddSvr
             // 
-            btnAddSvr.BackColor = Color.LimeGreen;
-            btnAddSvr.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAddSvr.Location = new Point(102, 199);
-            btnAddSvr.Name = "btnAddSvr";
-            btnAddSvr.Size = new Size(140, 37);
-            btnAddSvr.TabIndex = 6;
-            btnAddSvr.Text = "Save Realmlist";
-            btnAddSvr.UseVisualStyleBackColor = false;
-            btnAddSvr.Click += btnAddSvr_Click;
+            this.btnAddSvr.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAddSvr.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddSvr.Location = new System.Drawing.Point(102, 199);
+            this.btnAddSvr.Name = "btnAddSvr";
+            this.btnAddSvr.Size = new System.Drawing.Size(140, 37);
+            this.btnAddSvr.TabIndex = 6;
+            this.btnAddSvr.Text = "Save Realmlist";
+            this.btnAddSvr.UseVisualStyleBackColor = false;
+            this.btnAddSvr.Click += new System.EventHandler(this.btnAddSvr_Click);
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Gadugi", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(89, 9);
-            label4.Name = "label4";
-            label4.Size = new Size(153, 21);
-            label4.TabIndex = 7;
-            label4.Text = "Adding a Server";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(89, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 21);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Adding a Server";
             // 
             // AddServer
             // 
-            AccessibleRole = AccessibleRole.None;
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(329, 248);
-            Controls.Add(label4);
-            Controls.Add(btnAddSvr);
-            Controls.Add(label3);
-            Controls.Add(txtAbout);
-            Controls.Add(label2);
-            Controls.Add(txtRealmlist);
-            Controls.Add(label1);
-            Controls.Add(txtSvrName);
-            Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            MaximumSize = new Size(345, 287);
-            MinimumSize = new Size(345, 287);
-            Name = "AddServer";
-            ShowIcon = false;
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Add a Realmlist";
-            TopMost = true;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(329, 248);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnAddSvr);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtAbout);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtRealmlist);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtSvrName);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(345, 287);
+            this.MinimumSize = new System.Drawing.Size(345, 287);
+            this.Name = "AddServer";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Add a Realmlist";
+            this.TopMost = true;
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
